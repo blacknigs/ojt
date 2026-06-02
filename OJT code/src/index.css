@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+/* Print Overrides to ensure the generated SAAF and 74A forms occupy full physical printing bounds */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #saaf-print-document, #saaf-print-document *,
+  #r74a-print-document, #r74a-print-document * {
+    visibility: visible;
+  }
+  #saaf-print-document, #r74a-print-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
