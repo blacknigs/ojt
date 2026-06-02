@@ -1,0 +1,6 @@
+{
+  "name": "Accountable Forms Tracker",
+  "description": "A secure web-based platform to record, manage, and export SAAF, 74A, and Accountable Forms (016, 51, 54) balance, receipts, and issuances.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
